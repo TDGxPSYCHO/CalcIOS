@@ -1,0 +1,95 @@
+:root {
+  --bg-top: #f8efe6;
+  --bg-bottom: #d7e5f8;
+  --panel: #1f2129;
+  --display: #ffffff;
+  --num: #3a3d4a;
+  --util: #a2a7b6;
+  --op: #ff9f0a;
+  --text: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Nunito", sans-serif;
+  background: linear-gradient(150deg, var(--bg-top), var(--bg-bottom));
+}
+
+.phone {
+  width: min(92vw, 390px);
+  border-radius: 36px;
+  padding: 18px;
+  background: linear-gradient(170deg, #2d313e, #181a20);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+}
+
+.calculator {
+  display: grid;
+  gap: 14px;
+}
+
+.display {
+  min-height: 108px;
+  color: var(--display);
+  font-size: clamp(2.2rem, 7vw, 3.3rem);
+  text-align: right;
+  padding: 14px 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.key {
+  height: 70px;
+  border: 0;
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 1.45rem;
+  cursor: pointer;
+  transition: transform 120ms ease, filter 120ms ease;
+}
+
+.key:active {
+  transform: scale(0.97);
+  filter: brightness(1.1);
+}
+
+.num {
+  background: var(--num);
+}
+
+.util {
+  background: var(--util);
+  color: #111;
+}
+
+.op {
+  background: var(--op);
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 420px) {
+  .key {
+    height: 62px;
+    font-size: 1.25rem;
+  }
+
+  .display {
+    min-height: 88px;
+  }
+}
