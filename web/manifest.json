@@ -1,0 +1,23 @@
+{
+  "name": "CalcIOS",
+  "short_name": "CalcIOS",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#181a20",
+  "theme_color": "#181a20",
+  "description": "iOS-inspired calculator with scientific mode, memory, history, and graphing.",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

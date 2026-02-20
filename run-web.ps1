@@ -20,5 +20,10 @@ $url = "http://127.0.0.1:$Port/"
 Write-Host "Serving $webDir at $url"
 Write-Host 'Press Ctrl+C to stop.'
 
-Start-Process $url | Out-Null
+try {
+  Start-Process $url | Out-Null
+} catch {
+  Write-Host "Could not auto-open browser in this environment. Open $url manually."
+}
+
 python -m http.server $Port --directory $webDir

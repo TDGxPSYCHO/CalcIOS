@@ -16,7 +16,17 @@ public:
     void toggleSign();
     void percent();
 
+    void memoryClear();
+    void memoryRecall();
+    void memoryStore();
+    void memoryAdd();
+    void memorySubtract();
+
+    void setPi();
+    void applyUnary(const std::string& fn);
+
     std::string getDisplay() const;
+    double getMemoryValue() const;
 
 private:
     std::string currentInput;
@@ -24,6 +34,11 @@ private:
     char pendingOperator;
     bool waitingForNewInput;
     bool errorState;
+
+    double memoryValue;
+    char lastOperator;
+    double lastRhs;
+    bool hasLastRepeat;
 
     static std::string formatNumber(double value);
     static double parseInput(const std::string& input);
